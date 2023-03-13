@@ -1,0 +1,76 @@
+.service {
+  padding: 11rem 0 12rem;
+
+  &-list {
+    @include flexBox(stretch, space-between);
+    margin-top: 6.5rem;
+  }
+
+  &-list:first-child {
+    border-bottom: 1px solid $gray-dark-color;
+    margin-bottom: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  &-item {
+    width: calc(33.33% - 2.7rem);
+    @include flexBox(flex-start);
+
+    &-icon {
+      font-size: 3.5rem;
+      color: $third-color;
+      margin: 0 3rem;
+    }
+
+    &-info {
+      width: calc(100% - 9.5rem);
+      height: 100%;
+      @include flexBox(flex-start, space-between, column);
+    }
+
+    &-title {
+      color: $title-color;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      line-height: 1.4;
+      @include textClamp(1);
+    }
+
+    &-desc {
+      color: $text-color;
+      line-height: 1.6;
+      font-weight: 300;
+      font-family: $secondary-font;
+    }
+  }
+
+  // Apply css grid
+  // @include minWidth(1024px) {
+  //   &-list {
+  //     display: grid;
+  //     grid-template-columns: repeat(3, 1fr);
+  //     grid-gap: 0 4rem;
+  //   }
+
+  //   &-item {
+  //     width: auto;
+  //   }
+  // }
+
+  @include maxWidth(1023px) {
+    padding: 5rem 0;
+
+    &-list {
+      display: block;
+    }
+
+    &-item {
+      width: 100%;
+    }
+
+    &-item:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+}
