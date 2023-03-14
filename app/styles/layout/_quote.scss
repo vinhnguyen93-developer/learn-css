@@ -1,0 +1,91 @@
+.quote {
+  @include bg($gray-color);
+  padding: 6.5rem 0;
+
+  &-container {
+    @include flexBox(center, space-between);
+  }
+
+  &-arrow {
+    color: $gray-dark-color;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 1rem 2rem;
+  }
+
+  &-content {
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
+    @include flexBox(center);
+  }
+
+  &-icon {
+    @include size(15rem);
+    @include flexBox(center, center);
+    border: 0.3rem solid $third-color;
+    flex-shrink: 0;
+  }
+
+  &-info {
+    padding-left: 6rem;
+  }
+
+  &-desc {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.6;
+    font-style: italic;
+    font-family: $secondary-font;
+    margin-bottom: 2.5rem;
+    color: $text-color;
+    @include textClamp(3);
+  }
+
+  &-author {
+    font-family: $third-font;
+    font-size: 2.4rem;
+    position: relative;
+    padding-left: 7rem;
+
+    &::before {
+      content: '';
+      @include absoluteCenter('top');
+      @include size(6rem, 0.3rem);
+      @include bg($primary-color);
+      left: 0;
+    }
+  }
+
+  @include maxWidth(767px) {
+    &-arrow {
+      display: none;
+    }
+
+    &-content {
+      padding: 0;
+      flex-direction: column;
+    }
+
+    &-icon {
+      @include size(10rem);
+
+      img {
+        max-width: 50%;
+      }
+    }
+
+    &-info {
+      padding-left: 0;
+      margin-top: 3rem;
+    }
+
+    &-desc {
+      display: block;
+      font-size: 1.6rem;
+    }
+
+    &-author {
+      font-size: 2rem;
+    }
+  }
+}
