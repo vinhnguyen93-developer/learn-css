@@ -924,3 +924,100 @@ li {
 .team-main:hover::after {
   transform: translate(1rem, 1rem);
 }
+
+.brand {
+  padding: 8rem 0;
+  background-color: #f8f8f8;
+}
+@media screen and (max-width: 767px) {
+  .brand {
+    padding: 3rem 0;
+  }
+}
+
+.work {
+  padding-top: 10rem;
+}
+.work-list {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  height: 78rem;
+}
+.work-column {
+  width: 25%;
+}
+.work-content {
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+.work-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.work-title {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  max-width: 100%;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.work-desc {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 300;
+}
+.work-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.work-item {
+  height: 50%;
+}
+.work-item--full {
+  height: 100%;
+}
+@media screen and (max-width: 1600px) {
+  .work-list {
+    height: 60rem;
+  }
+}
+
+.work-item {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.25s linear;
+}
+.work-item .work-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s linear;
+  background: linear-gradient(to bottom, rgba(233, 131, 130, 0.8), rgba(238, 216, 137, 0.8));
+  z-index: 2;
+}
+.work-item:hover .work-content {
+  opacity: 1;
+  visibility: visible;
+}

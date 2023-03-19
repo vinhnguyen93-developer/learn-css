@@ -78,3 +78,12 @@
 }
 
 @include hoverEffect('.team-main', '.team-content');
+
+.brand {
+  padding: 8rem 0;
+  @include bg($gray-color);
+
+  @include maxWidth(767px) {
+    padding: 3rem 0;
+  }
+}
