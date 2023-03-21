@@ -3,48 +3,21 @@ section.work
     +blockBox('What we do', 'Some of our work', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
   .work-list 
     .work-column 
-      .work-item 
-        img.work-image(src='./images/img-work1.png')
-        .work-content 
-          i.fa.fa-image.work-icon 
-          h3.work-title Creatively Designed
-          span.work-desc Lorem ipsum dolor sit
-      .work-item 
-        img.work-image(src='./images/img-work3.png')
-        .work-content 
-          i.fa.fa-image.work-icon 
-          h3.work-title Creatively Designed
-          span.work-desc Lorem ipsum dolor sit
+      +workItem('./images/img-work1.png')
+      +workItem('./images/img-work3.png')
     .work-column 
-      .work-item 
-        img.work-image(src='./images/img-work2.png')
-        .work-content 
-          i.fa.fa-image.work-icon 
-          h3.work-title Creatively Designed
-          span.work-desc Lorem ipsum dolor sit
-      .work-item 
-        img.work-image(src='./images/img-work4.png')
-        .work-content 
-          i.fa.fa-image.work-icon 
-          h3.work-title Creatively Designed
-          span.work-desc Lorem ipsum dolor sit
+      +workItem('./images/img-work2.png')
+      +workItem('./images/img-work4.png')
     .work-column 
-      .work-item.work-item--full 
-        img.work-image(src='./images/img-work5.png')
-        .work-content 
-          i.fa.fa-image.work-icon 
-          h3.work-title Creatively Designed
-          span.work-desc Lorem ipsum dolor sit
+      +workItem('./images/img-work5.png', 'work-item--full')
     .work-column 
-      .work-item 
-        img.work-image(src='./images/img-work6.png')
-        .work-content 
-          i.fa.fa-image.work-icon 
-          h3.work-title Creatively Designed
-          span.work-desc Lorem ipsum dolor sit
-      .work-item 
-        img.work-image(src='./images/img-work7.png')
-        .work-content 
-          i.fa.fa-image.work-icon 
-          h3.work-title Creatively Designed
-          span.work-desc Lorem ipsum dolor sit
+      +workItem('./images/img-work6.png')
+      +workItem('./images/img-work7.png')
+  //- .work-grid 
+  //-   +workItem('./images/img-work1.png')
+  //-   +workItem('./images/img-work2.png')
+  //-   +workItem('./images/img-work3.png')
+  //-   +workItem('./images/img-work4.png')
+  //-   +workItem('./images/img-work5.png')
+  //-   +workItem('./images/img-work6.png')
+  //-   +workItem('./images/img-work7.png')

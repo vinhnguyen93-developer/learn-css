@@ -67,3 +67,11 @@ mixin teamItem(image, name, position)
 		.team-info
 			h3.team-name= name
 			span.team-position= position
+
+mixin workItem(image, full = '', icon = 'fa fa-image', title = 'Creatively Designed', desc = 'Lorem ipsum dolor sit')
+	.work-item(class= full)
+		img.work-image(src= image)
+		.work-content 
+			i.work-icon(class= icon) 
+			h3.work-title= title
+			span.work-desc= desc

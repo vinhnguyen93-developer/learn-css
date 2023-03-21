@@ -994,6 +994,33 @@ li {
     height: 60rem;
   }
 }
+@media screen and (max-width: 1279px) {
+  .work-list {
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: auto;
+  }
+  .work-column {
+    width: 50%;
+  }
+  .work-item {
+    height: 42rem;
+  }
+  .work-item--full {
+    height: 84rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .work {
+    padding-top: 5rem;
+  }
+  .work-column {
+    width: 100%;
+  }
+  .work-item, .work-item-full {
+    height: auto;
+  }
+}
 
 .work-item {
   position: relative;
