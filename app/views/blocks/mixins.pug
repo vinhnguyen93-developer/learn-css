@@ -75,3 +75,11 @@ mixin workItem(image, full = '', icon = 'fa fa-image', title = 'Creatively Desig
 			i.work-icon(class= icon) 
 			h3.work-title= title
 			span.work-desc= desc
+
+mixin peopleItem(image, name, job, desc)
+	li.people-item
+		img.people-avatar(src= image)
+		.people-info 
+			h3.people-name= name
+			span.people-position= job
+			p.people-desc= desc
