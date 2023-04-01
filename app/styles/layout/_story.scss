@@ -75,4 +75,78 @@
       color: $text-color;
     }
   }
+
+  @include maxWidth(1023px) {
+    padding: 5rem 0;
+
+    &-image {
+      height: 14rem;
+    }
+
+    &-date {
+      padding: 1rem 1.5rem;
+    }
+
+    &-title {
+      font-size: 1.2rem;
+    }
+
+    &-desc {
+      font-size: 1.3rem;
+
+      &-text {
+        @include textClamp(4);
+      }
+    }
+  }
+
+  @include maxWidth(767px) {
+    padding-bottom: 0;
+
+    &-list {
+      display: block;
+    }
+
+    &-item {
+      width: 100%;
+      margin-bottom: 5rem;
+    }
+
+    &-date {
+      left: -5px;
+      bottom: 5px;
+    }
+
+    &-image {
+      height: auto;
+    }
+  }
+}
+
+.map {
+  padding: 6rem 0;
+  background: linear-gradient(to bottom, rgba(white, 0.7), rgba(white, 0.6)),
+    url('../images/img-map.png') no-repeat center / cover;
+
+  &-content {
+    @include flexBox(center, center, column);
+  }
+
+  &-heading {
+    position: relative;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: $primary-color;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+
+    &::after {
+      content: '';
+      @include size(6.5rem, 0.4rem);
+      @include bg($primary-color);
+      @include absoluteCenter();
+      bottom: 0;
+    }
+  }
 }
