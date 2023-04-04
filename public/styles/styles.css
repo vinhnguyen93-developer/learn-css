@@ -23,6 +23,17 @@ li {
   list-style-type: none;
 }
 
+input,
+button {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
 .wrapper {
   max-width: 1920px;
   margin: 0 auto;
@@ -1285,4 +1296,120 @@ li {
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
+}
+
+.footer-top {
+  padding: 7.5rem 0 7rem;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.footer-column {
+  width: calc(35% - 2.5rem);
+}
+.footer-column:first-child {
+  width: calc(40% - 2.5rem);
+}
+.footer-column:last-child {
+  width: calc(25% - 2.5rem);
+}
+.footer-heading {
+  text-transform: uppercase;
+  font-weight: 500;
+  height: 4rem;
+}
+.footer-heading--logo {
+  text-transform: none;
+  font-size: 4.6rem;
+  font-weight: bold;
+  color: #999999;
+}
+.footer-desc {
+  font-size: 1.5rem;
+  color: #999999;
+  margin-bottom: 4.5rem;
+  margin-top: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+.footer-follower {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+.footer-follower strong {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+.footer-social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  margin-bottom: 3.5rem;
+}
+.footer-social span {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.footer-social-icon {
+  color: #95e1d3;
+  margin-left: 1.5rem;
+  font-size: 2rem;
+}
+.footer-form {
+  width: 100%;
+  max-width: 38rem;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+.footer-form-input {
+  padding: 1.5rem;
+  border: 1px solid #e5e5e5;
+  border-right: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  background-color: white;
+}
+.footer-form-button {
+  color: white;
+  text-transform: uppercase;
+  padding: 1.5rem 3.5rem;
+  border: 0;
+  background-color: #95e1d3;
+}
+.footer-blog {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  margin-bottom: 3rem;
+}
+.footer-blog-image {
+  width: 12rem;
+  height: 8rem;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.footer-blog-info {
+  padding-left: 2rem;
+}
+.footer-blog-title {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+.footer-blog-date {
+  font-style: italic;
+  color: #999999;
+  font-family: "Roboto", sans-serif;
 }
