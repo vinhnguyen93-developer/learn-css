@@ -1319,12 +1319,14 @@ button {
   text-transform: uppercase;
   font-weight: 500;
   height: 4rem;
+  display: inline-block;
+  margin-bottom: 2rem;
 }
 .footer-heading--logo {
   text-transform: none;
   font-size: 4.6rem;
   font-weight: bold;
-  color: #999999;
+  color: #cccccc;
 }
 .footer-desc {
   font-size: 1.5rem;
@@ -1376,6 +1378,7 @@ button {
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   background-color: white;
+  width: 100%;
 }
 .footer-form-button {
   color: white;
@@ -1383,6 +1386,7 @@ button {
   padding: 1.5rem 3.5rem;
   border: 0;
   background-color: #95e1d3;
+  flex-shrink: 0;
 }
 .footer-blog {
   display: flex;
@@ -1407,9 +1411,48 @@ button {
   margin-bottom: 1rem;
   line-height: 1.4;
   font-weight: 500;
+  color: #333333;
 }
 .footer-blog-date {
   font-style: italic;
   color: #999999;
   font-family: "Roboto", sans-serif;
+}
+.footer-images {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: -0.2rem;
+  margin-bottom: 2rem;
+}
+.footer-images-more {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  color: #333333;
+}
+.footer-image {
+  margin-left: 0.2rem;
+  width: calc(33.33% - 0.2rem);
+  margin-bottom: 0.2rem;
+  padding-bottom: 33.33%;
+  height: 0;
+  position: relative;
+}
+.footer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.footer-bottom {
+  padding: 2.5rem 0;
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+}
+.footer-bottom span {
+  color: #e98382;
 }
