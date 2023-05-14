@@ -159,4 +159,15 @@
       color: $primary-color;
     }
   }
+
+  @include maxWidth(1023px) {
+    &-top {
+      display: block;
+    }
+
+    &-column:not(:nth-child(99)) {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+  }
 }

@@ -2,10 +2,6 @@
   @include bg($gray-color);
   padding: 6.5rem 0;
 
-  &-container {
-    @include flexBox(center, space-between);
-  }
-
   &-arrow {
     color: $gray-dark-color;
     font-size: 3rem;
@@ -13,7 +9,7 @@
     padding: 1rem 2rem;
   }
 
-  &-content {
+  &-item {
     padding-left: 5.5rem;
     padding-right: 5.5rem;
     @include flexBox(center);
@@ -56,12 +52,36 @@
     }
   }
 
+  // Slick slider
+  .slick-initialized .slick-slide {
+    display: flex;
+  }
+
+  .slick-arrow {
+    background: transparent;
+    border: none;
+    color: $gray-dark-color;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    @include absoluteCenter('top');
+  }
+
+  .slick-prev {
+    left: 0;
+    z-index: 1;
+  }
+
+  .slick-next {
+    right: 0;
+  }
+
   @include maxWidth(767px) {
     &-arrow {
       display: none;
     }
 
-    &-content {
+    &-item {
       padding: 0;
       flex-direction: column;
     }

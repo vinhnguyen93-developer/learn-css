@@ -664,20 +664,13 @@ button {
   background-color: #f8f8f8;
   padding: 6.5rem 0;
 }
-.quote-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-}
 .quote-arrow {
   color: #cccccc;
   font-size: 3rem;
   cursor: pointer;
   padding: 1rem 2rem;
 }
-.quote-content {
+.quote-item {
   padding-left: 5.5rem;
   padding-right: 5.5rem;
   display: flex;
@@ -734,11 +727,32 @@ button {
   background-color: #e98382;
   left: 0;
 }
+.quote .slick-initialized .slick-slide {
+  display: flex;
+}
+.quote .slick-arrow {
+  background: transparent;
+  border: none;
+  color: #cccccc;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.quote .slick-prev {
+  left: 0;
+  z-index: 1;
+}
+.quote .slick-next {
+  right: 0;
+}
 @media screen and (max-width: 767px) {
   .quote-arrow {
     display: none;
   }
-  .quote-content {
+  .quote-item {
     padding: 0;
     flex-direction: column;
   }
@@ -1455,4 +1469,13 @@ button {
 }
 .footer-bottom span {
   color: #e98382;
+}
+@media screen and (max-width: 1023px) {
+  .footer-top {
+    display: block;
+  }
+  .footer-column:not(:nth-child(99)) {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
 }
