@@ -101,3 +101,14 @@ mixin storyItem(image)
 			.story-meta-item 
 				i.fa.fa-comment.story-meta-icon 
 				span.story-meta-number 17
+
+mixin quoteItem(src = './images/img-quote.png', type = false, desc = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, consectetur deserunt. Rerum ea consequatur perferendis ipsam ex totam labore. In harum ipsam laboriosam dolorum, consequuntur inventore deserunt! Aut, voluptatem? Perferendis.", author = 'Jon Doe')
+	.quote-item 
+		if type == false
+			.quote-icon 
+				img(src= src)
+		else 
+			img(src= src).quote-image 
+		.quote-info 
+			p.quote-desc= desc 
+			span.quote-author= author

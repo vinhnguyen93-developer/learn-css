@@ -20,11 +20,20 @@
     @include flexBox(center, center);
     border: 0.3rem solid $third-color;
     flex-shrink: 0;
+    margin-right: 6rem;
   }
 
-  &-info {
-    padding-left: 6rem;
+  &-image {
+    @include size(22rem);
+    object-fit: cover;
+    border-radius: 100rem;
+    flex-shrink: 0;
+    margin-right: 2.5rem;
   }
+
+  // &-info {
+  //   padding-left: 6rem;
+  // }
 
   &-desc {
     font-size: 2.5rem;
@@ -88,10 +97,15 @@
 
     &-icon {
       @include size(10rem);
+      margin-right: 0;
 
       img {
         max-width: 50%;
       }
+    }
+
+    &-image {
+      margin-right: 0;
     }
 
     &-info {

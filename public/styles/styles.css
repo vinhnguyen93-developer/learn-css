@@ -689,9 +689,15 @@ button {
   flex-wrap: nowrap;
   border: 0.3rem solid #95e1d3;
   flex-shrink: 0;
+  margin-right: 6rem;
 }
-.quote-info {
-  padding-left: 6rem;
+.quote-image {
+  width: 22rem;
+  height: 22rem;
+  object-fit: cover;
+  border-radius: 100rem;
+  flex-shrink: 0;
+  margin-right: 2.5rem;
 }
 .quote-desc {
   font-size: 2.5rem;
@@ -759,9 +765,13 @@ button {
   .quote-icon {
     width: 10rem;
     height: 10rem;
+    margin-right: 0;
   }
   .quote-icon img {
     max-width: 50%;
+  }
+  .quote-image {
+    margin-right: 0;
   }
   .quote-info {
     padding-left: 0;
